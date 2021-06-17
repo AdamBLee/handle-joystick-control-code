@@ -2,16 +2,16 @@ input.onButtonPressed(Button.A, function () {
     radio.sendString("Z")
 })
 GHBit.onKey(GHBit.enButton.B3, function () {
-    radio.sendString("G")
+    radio.sendString("button_blue")
 })
 GHBit.onKey(GHBit.enButton.B1, function () {
-    radio.sendString("E")
+    radio.sendString("button_red")
 })
 GHBit.onKey(GHBit.enButton.B4, function () {
-    radio.sendString("H")
+    radio.sendString("button_yellow")
 })
 GHBit.onKey(GHBit.enButton.B2, function () {
-    radio.sendString("F")
+    radio.sendString("button_green")
 })
 let radio_group = 1
 radio.setGroup(radio_group)
@@ -35,6 +35,6 @@ basic.forever(function () {
         basic.showIcon(IconNames.No)
     } else if (GHBit.Rocker(GHBit.enRocker.Nostate)) {
         radio.sendString("stick_middle")
-        basic.showIcon(IconNames.No)
+        basic.showNumber(radio_group)
     }
 })

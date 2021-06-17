@@ -13,8 +13,9 @@ GHBit.onKey(GHBit.enButton.B4, function () {
 GHBit.onKey(GHBit.enButton.B2, function () {
     radio.sendString("F")
 })
-basic.showIcon(IconNames.Heart)
-radio.setGroup(1)
+let radio_group = 1
+radio.setGroup(radio_group)
+basic.showNumber(radio_group)
 radio.setTransmitPower(7)
 basic.forever(function () {
     if (GHBit.Rocker(GHBit.enRocker.Up)) {
